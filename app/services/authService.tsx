@@ -90,7 +90,7 @@ export const loginUser = async (
   password: string
 ): Promise<AuthResponse> => {
   try {
-    const response = await fetch("https://9z840bfas0.execute-api.us-east-2.amazonaws.com/prod/api/Auth/login", {
+    const response = await fetch("https://2j1bbjr122.execute-api.us-east-2.amazonaws.com/api/Auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
