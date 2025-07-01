@@ -9,7 +9,7 @@ export const fetchOpportunities = async (query: string, token: string): Promise<
             throw new Error('No hay token disponible');
         }
 
-        const response = await fetch(`https://antivirus-backend.us-east-2.elasticbeanstalk.com/api/Opportunity?query=${query}`, {
+        const response = await fetch(`https://n93fij9m9j.execute-api.us-east-2.amazonaws.com/api/Opportunity?query=${query}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,

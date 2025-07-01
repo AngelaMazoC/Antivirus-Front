@@ -47,7 +47,7 @@ export const registerUser = async (
   userData: RegisterUserData
 ): Promise<AuthResponse> => {
   try {
-    const response = await fetch("https://9z840bfas0.execute-api.us-east-2.amazonaws.com/prod/api/Auth/register", {
+    const response = await fetch("https://n93fij9m9j.execute-api.us-east-2.amazonaws.com/api/Auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export const loginUser = async (
   password: string
 ): Promise<AuthResponse> => {
   try {
-    const response = await fetch("https://2j1bbjr122.execute-api.us-east-2.amazonaws.com/prod/api/Auth/login", {
+    const response = await fetch("https://n93fij9m9j.execute-api.us-east-2.amazonaws.com/api/Auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -165,7 +165,7 @@ export async function logout(): Promise<AuthResponse> {
 
     // Realiza la petición al servidor para cerrar sesión
     const response = await fetch(
-      "https://9z840bfas0.execute-api.us-east-2.amazonaws.com/prod/api/Auth/login/logout",
+      "https://n93fij9m9j.execute-api.us-east-2.amazonaws.com/api/Auth/login/logout",
       {
         method: "POST",
         headers: {
@@ -207,7 +207,7 @@ export const getUsers = async () => {
   try {
     const token = localStorage.getItem("token"); // o de donde lo estés guardando
 
-    const response = await fetch("https://antivirus-backend.us-east-2.elasticbeanstalk.com/api/Users/all", {
+    const response = await fetch("https://n93fij9m9j.execute-api.us-east-2.amazonaws.com/api/Users/all", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -233,7 +233,7 @@ export const updateUser = async (
   try {
     const token = localStorage.getItem("token"); // o de donde lo estés guardando
 
-    const response = await fetch(`https://antivirus-backend.us-east-2.elasticbeanstalk.com/api/Users/Updatebyid/${userId}`, {
+    const response = await fetch(`https://n93fij9m9j.execute-api.us-east-2.amazonaws.com/api/Users/Updatebyid/${userId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
