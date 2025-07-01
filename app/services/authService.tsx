@@ -47,7 +47,7 @@ export const registerUser = async (
   userData: RegisterUserData
 ): Promise<AuthResponse> => {
   try {
-    const response = await fetch("https://antivirus-backend.us-east-2.elasticbeanstalk.com/api/Auth/register", {
+    const response = await fetch("https://9z840bfas0.execute-api.us-east-2.amazonaws.com/prod/api/Auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
