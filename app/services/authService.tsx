@@ -165,7 +165,7 @@ export async function logout(): Promise<AuthResponse> {
 
     // Realiza la petición al servidor para cerrar sesión
     const response = await fetch(
-      "https://antivirus-backend.us-east-2.elasticbeanstalk.com/api/Auth/login/logout",
+      "https://9z840bfas0.execute-api.us-east-2.amazonaws.com/prod/api/Auth/login/logout",
       {
         method: "POST",
         headers: {
