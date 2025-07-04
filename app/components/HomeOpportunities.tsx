@@ -3,7 +3,7 @@ import { FC } from "react";
 const opportunitiesData = [
   {
     id: 1,
-    image: "/public/images/LogoNodo.png",
+    image: "/Images/LogoNodo.png",
     title: "NODO EAFIT",
     description:
       "Participa en programas de formación y talleres en la Universidad EAFIT en la era de la tecnología para potenciar tus habilidades y conocimientos. ¡Inscríbete hoy!",
@@ -11,7 +11,7 @@ const opportunitiesData = [
   },
   {
     id: 2,
-    image: "/public/images/BecasVelez.png",
+    image: "/Images/BecasVelez.png",
     title: "VÉLEZ REYES +",
     description:
       "Ofrecen apoyo financiero a estudiantes destacados. Solicita tu beca y alcanza tus metas educativas.",
@@ -19,7 +19,7 @@ const opportunitiesData = [
   },
   {
     id: 3,
-    image: "/public/images/Comfama.png",
+    image: "/Images/Comfama.png",
     title: "COMFAMA",
     description:
       "Accede a programas educativos y recreativos con Comfama. Encuentra la oportunidad perfecta para tu crecimiento personal y profesional.",
@@ -36,7 +36,7 @@ const HomeOpportunities: FC = () => {
           ¡Mira estas oportunidades!
         </h2>
         <img
-          src="/public/images/SelloNodo.png"
+          src="/Images/SelloNodo.png"
           alt="Sello antivirus"
           className="w-20 md:w-24 lg:w-36"
         />

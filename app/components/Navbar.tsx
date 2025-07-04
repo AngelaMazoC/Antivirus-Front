@@ -88,7 +88,7 @@ export default function Navbar({ isAuthenticated }: NavbarProps) {
       {/* Logo */}
       <div className="h-16 flex items-center pl-4">
         <img
-          src="/public/images/logo.png"
+          src="/Images/logo.png"
           alt="Logo"
           className="max-h-20 w-auto object-contain"
         />
@@ -117,7 +117,7 @@ export default function Navbar({ isAuthenticated }: NavbarProps) {
 
         <li className="relative group">
           <Link
-            to="#oportunidades"
+            to="/oportunidades"
             className="hover:text-yellow-300 block pb-2 transform transition-all duration-300 hover:scale-110 origin-bottom"
           >
             Oportunidades
