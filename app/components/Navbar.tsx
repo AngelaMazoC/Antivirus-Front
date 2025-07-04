@@ -117,7 +117,7 @@ export default function Navbar({ isAuthenticated }: NavbarProps) {
 
         <li className="relative group">
           <Link
-            to="/oportunidades"
+            to="/oportunities"
             className="hover:text-yellow-300 block pb-2 transform transition-all duration-300 hover:scale-110 origin-bottom"
           >
             Oportunidades
@@ -187,12 +187,12 @@ export default function Navbar({ isAuthenticated }: NavbarProps) {
           {isUserMenuOpen && (
             <div
               ref={userMenuRef}
-              className="absolute right-0 top-12 backdrop-blur-lg text-black shadow-lg rounded-lg w-48 z-50 max-w-xs transition-all duration-300 ease-in-out"
+              className="absolute right-0 top-12 text-white shadow-lg rounded-lg w-48 z-50 max-w-xs transition-all duration-300 ease-in-out"
             >
               {isAuthenticated ? (
                 <>
                   {/* Nombre de usuario */}
-                  <div className="px-4 py-3 text-lg text-right font-semibold text-gray-800 hover:text-blue-600">
+                  <div className="px-4 py-3 text-lg text-right font-semibold text-gray-800 hover:text-blue-600 ">
                     {currentUser?.name}
                   </div>
 
@@ -222,10 +222,10 @@ export default function Navbar({ isAuthenticated }: NavbarProps) {
               ) : (
                 <>
                   {/* Login and Register Links */}
-                  <Link to="/login" className="block px-4 py-2 text-base hover:bg-yellow-300/60 transition-colors text-right rounded-md">
+                  <Link to="/login" className="block px-4 py-2 text-base hover:bg-yellow-300/60 transition-colors text-right rounded-md text-[#FFF]">
                     Login
                   </Link>
-                  <Link to="/register" className="block px-4 py-2 text-base hover:bg-yellow-300/60 transition-colors text-right rounded-md">
+                  <Link to="/register" className="block px-4 py-2 text-base hover:bg-yellow-300/60 transition-colors text-right rounded-md text-[#FFF]">
                     Registrarme
                   </Link>
                 </>

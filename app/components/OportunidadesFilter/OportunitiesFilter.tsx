@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { fetchOpportunities } from '~/services/fetchOpportunities ';
 import OpportunityCard from './OpportunityCard';
+import { fetchOpportunities } from '../../services/fetchOpportunities';
 
 const FiltroOportunidades = () => {
     const [query, setQuery] = useState('');
@@ -49,7 +49,7 @@ const FiltroOportunidades = () => {
 
             setOportunidades(filteredData);
         } catch (error) {
-            setError('Hubo un error al obtener las oportunidades');
+            setError('Debes iniciar sesión para ver las oportunidades.');
             console.error(error);
         }
     };
@@ -60,6 +60,9 @@ const FiltroOportunidades = () => {
 
     return (
         <div className="p-6">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 text-[#FFF]">
+                Oportunidades de Estudio
+            </h1>
             <input
                 type="text"
                 value={query}
@@ -70,10 +73,10 @@ const FiltroOportunidades = () => {
 
             {/* Filtros */}
             <div className="mb-6">
-                <h2 className="text-lg font-semibold text-gray-800 mb-4">Filtros</h2>
+                <h2 className="text-lg font-semibold text-gray-800 mb-4 text-[#FFF]">Filtros</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <div>
-                        <label className="block text-sm font-medium text-gray-600">Tipo</label>
+                        <label className="block text-sm font-medium text-gray-600 text-[#FFF]">Tipo</label>
                         <select
                             value={typeFilter}
                             onChange={(e) => setTypeFilter(e.target.value)}
@@ -87,7 +90,7 @@ const FiltroOportunidades = () => {
                         </select>
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-600">Modalidad</label>
+                        <label className="block text-sm font-medium text-gray-600 text-[#FFF]">Modalidad</label>
                         <select
                             value={modalityFilter}
                             onChange={(e) => setModalityFilter(e.target.value)}
@@ -100,7 +103,7 @@ const FiltroOportunidades = () => {
                         </select>
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-600">Responsable</label>
+                        <label className="block text-sm font-medium text-gray-600 text-[#FFF]">Responsable</label>
                         <select
                             value={managerFilter}
                             onChange={(e) => setManagerFilter(e.target.value)}
@@ -131,7 +134,7 @@ const FiltroOportunidades = () => {
 
             {error && <p className="text-red-500 mb-4">{error}</p>}
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 pt-10 pb-10 text-[#1D1856]">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 pt-10 pb-10 text-[#FFF]">
                 ¡Oportunidades para estudiar!
             </h2>
 
